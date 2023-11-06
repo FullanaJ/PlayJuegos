@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/platformsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Plataformas:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/platformsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/platformsTitle"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ps4Chip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showChip"
+                android:text="PS4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/pcChip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showChip"
+                android:text="PC"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/xboxChip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showChip"
+                android:text="XBOX"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/wiiChip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showChip"
+                android:text="WII"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/wiiUChip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showChip"
+                android:text="WIIU"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ds3Chip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showChip"
+                android:text="3DS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/x360Chip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showChip"
+                android:text="X360"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/genresTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Géneros:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+        <ListView
+            android:id="@+id/genreList"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genresTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        app:backgroundTint="?attr/colorPrimary"
+        app:fabAnchorMode="cradle"
+        app:fabAnimationMode="slide"
+        app:fabCradleMargin="5dp"
+        app:fabCradleVerticalOffset="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="add"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_anchor="@id/bottomAppBar"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
