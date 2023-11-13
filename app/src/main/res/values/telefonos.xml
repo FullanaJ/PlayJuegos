@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="telefonos">
+        <item>Telefono1</item>
+        <item>Telefono2</item>
+        <item>Telefono3</item>
+        <item>Telefono4</item>
+        <item>Telefono5</item>
+        </string-array>
+</resources>
